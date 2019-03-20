@@ -1,0 +1,38 @@
+{
+  "name": "sunglass",
+  "version": "0.1.0",
+  "description": "",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "keywords": [],
+  "main": "src/sunglass.js",
+  "scripts": {
+    "test": "karma start"
+  },
+  "author": "Ovilia",
+  "license": "MIT",
+  "bugs": {
+    "url": ""
+  },
+  "homepage": "",
+  "dependencies": {
+    "canvas": "^2.2.0",
+    "color": "^3.1.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.0",
+    "@babel/plugin-proposal-object-rest-spread": "^7.4.0",
+    "@babel/plugin-syntax-dynamic-import": "^7.2.0",
+    "@babel/plugin-transform-modules-commonjs": "^7.4.0",
+    "@babel/plugin-transform-runtime": "^7.4.0",
+    "@babel/preset-env": "^7.4.1",
+    "@babel/runtime": "^7.4.0",
+    "babel-loader": "^8.0.5",
+    "jsdom": "^14.0.0",
+    "jsdom-global": "^3.0.2",
+    "webpack": "^4.29.6",
+    "webpack-karma-jasmine": "^3.0.6"
+  }
+}
