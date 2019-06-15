@@ -1,17 +1,17 @@
 import Color from 'color';
 
 /**
- * Convert image into a given color palatte.
+ * Convert image into a given color palette.
  *
  * @param {Image | HTMLCanvasElement} image      input image
- * @param {string[]}                  [palatte=['#fff','#999','#555','#222']]
+ * @param {string[]}                  [palette=['#fff','#999','#555','#222']]
  *                                        colors of output image
  * @param {string}                    [colorSpace='rgb'] color space
  * @return {HTMLCanvasElement}        output image on canvas
  */
-export default function sunglass(image, palatte, colorSpace) {
-    if (!palatte) {
-        palatte = ['#fff', '#999', '#555', '#222'];
+export default function sunglass(image, palette, colorSpace) {
+    if (!palette) {
+        palette = ['#fff', '#999', '#555', '#222'];
     }
     if (!colorSpace) {
         colorSpace = 'rgb';
@@ -53,18 +53,18 @@ export default function sunglass(image, palatte, colorSpace) {
         const b = srcPixels[i + 2] * a + 255 * (1 - 1);
 
         let minDistance = Number.MAX_VALUE;
-        let minDistancePalatteId = null;
-        for (let p = 0; p < palatte.length; ++p) {
-            // TODO: cache palatte in hsv
-            const d = distance(Color.rgb(r, g, b), Color(palatte[p]), colorSpace);
+        let minDistancePaletteId = null;
+        for (let p = 0; p < palette.length; ++p) {
+            // TODO: cache palette in hsv
+            const d = distance(Color.rgb(r, g, b), Color(palette[p]), colorSpace);
             if (d < minDistance) {
                 minDistance = d;
-                minDistancePalatteId = p;
+                minDistancePaletteId = p;
             }
         }
 
-        // Use closest palatte to fill dist image
-        const distColor = Color(palatte[minDistancePalatteId]);
+        // Use closest palette to fill dist image
+        const distColor = Color(palette[minDistancePaletteId]);
         distPixels[i] = distColor.color[0];
         distPixels[i + 1] = distColor.color[1];
         distPixels[i + 2] = distColor.color[2];
