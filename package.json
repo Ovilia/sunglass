@@ -1,6 +1,6 @@
 {
   "name": "sunglass",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "",
   "repository": {
     "type": "git",
@@ -9,14 +9,13 @@
   "keywords": [],
   "main": "src/sunglass.js",
   "scripts": {
-    "test": "karma start"
   },
   "author": "Ovilia",
   "license": "MIT",
   "bugs": {
-    "url": ""
+    "url": "https://github.com/Ovilia/sunglass/issues"
   },
-  "homepage": "",
+  "homepage": "https://github.com/Ovilia/sunglass",
   "dependencies": {
     "canvas": "^2.2.0",
     "color": "^3.1.0"

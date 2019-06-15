@@ -1,6 +1,15 @@
 import Color from 'color';
 
-export default function sunglasses(image, palatte, colorSpace) {
+/**
+ * Convert image into a given color palatte.
+ *
+ * @param {Image | HTMLCanvasElement} image      input image
+ * @param {string[]}                  [palatte=['#fff','#999','#555','#222']]
+ *                                        colors of output image
+ * @param {string}                    [colorSpace='rgb'] color space
+ * @return {HTMLCanvasElement}        output image on canvas
+ */
+export default function sunglass(image, palatte, colorSpace) {
     if (!palatte) {
         palatte = ['#fff', '#999', '#555', '#222'];
     }
@@ -33,7 +42,6 @@ export default function sunglasses(image, palatte, colorSpace) {
     const distCtx = distCanvas.getContext('2d');
 
     const srcPixels = srcCtx.getImageData(0, 0, width, height).data;
-    console.log(srcPixels);
     const distImageData =  distCtx.createImageData(width, height);
     const distPixels = distImageData.data;
 
