@@ -32,6 +32,6 @@
     "jsdom": "^14.0.0",
     "jsdom-global": "^3.0.2",
     "webpack": "^4.29.6",
-    "webpack-karma-jasmine": "^3.0.6"
+    "webpack-karma-jasmine": "^4.0.0"
   }
 }
